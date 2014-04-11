@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html> 
+<html> 
+   <head> 
+      <title>jQuery Mobile - Formulários</title> 
+      <meta charset="utf-8"/>
+       <script type="text/javascript" src="js/cordova-2.7.0.js">
+      <!--  O viewport é a área onde seu website aparece. 
+            É a área que você se preocupa se o vai ou não caber na hora da criação. 
+            A tag Viweport especifica como o browser deve considerar o nivel de zoom 
+            Se não for usado, muitos browsers usarão uma página "virtual" de 900 pixels
+            para manter a compatibilidade com sites desktop -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <!-- Folha de estilos - CSS - do jQuery Mobile -->
+      <link rel="stylesheet" href="js/jquery.mobile-1.4.2.min.css" /> 
+      <!-- Framework jQuery (Core) -->
+      <script type="text/javascript" src="js/jquery.js"></script> 
+      <!-- Framework jQuery Mobile -->
+      <script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script> 
+   </head> 
+
+   <body> 
+ 
+      <div data-role="page" id="home">
+       
+         <div data-role="header">
+            <h1>Pedido de Sorvete</h1>
+         </div>
+       
+         <div role="main" class="ui-content"> 
+            <form action="#" method="get">
+           
+               <label for="name">Nome:</label>
+               <input type="text" name="name" id="name" value=""  />
+               
+               <div data-role="controlgroup">
+                  <legend>Qual sabor você deseja?</legend>
+                 
+                  <input type="checkbox" name="vanilla" id="vanilla" class="custom" />
+                  <label for="vanilla">Baunilha</label>
+                 
+                  <input type="checkbox" name="chocolate" id="chocolate" class="custom" />
+                  <label for="chocolate">Chocolate</label>
+                 
+                  <input type="checkbox" name="strawberry" id="strawberry" class="custom" />
+                  <label for="strawberry">Morango</label>                 
+               </div>    
+               
+               <label for="quantity">Quantidade:</label>
+               <input type="range" name="quantity" id="quantity" value="1" min="1" max="10"  />
+          
+               <label for="sprinkles">Confete:</label>
+               <select name="sprinkles" id="sprinkles" data-role="slider">
+                  <option value="off">No</option>
+                  <option value="on">Yes</option>
+               </select> 
+          
+               <label for="store">Retira na loja:</label>
+               <select name="store" id="store">
+                  <option value="mainStreet">Av. do Estado</option>
+                  <option value="libertyAvenue">Rua 3000</option>
+                  <option value="circleSquare">Praça Bandeirantes</option>
+                  <option value="angelRoad">Av. das Nações</option>
+               </select>
+               
+               <div class="ui-body-b">
+                  <fieldset class="ui-grid-a">
+                     <div class="ui-block-a"><button type="submit" data-theme="d">Cancela</button></div>
+                     <div class="ui-block-b"><button type="submit" data-theme="a">Enviar</button></div>     
+                  </fieldset>
+               </div>
+            </form>
+          </div>
+            
+        </div>
+       
+      </div>
+   </body>
+</html>
